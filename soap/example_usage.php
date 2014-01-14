@@ -7,7 +7,7 @@ include_once("XMLtoArray.class.php");
 include_once("LSapiSoap.class.php"); 
 $class = new LSapiSoap($u,$p);
 $parameters = array('NamedEntityRecognitionInput'=>array('text' => $text));
-$test=$class->makeTheCall("ontology", "searchNer", $parameters);
+$test=$class->makeTheCall("ontologies", "searchNer", $parameters);
 $test=xml2ary($test);
 print_r($test);
 ?>
