@@ -1,0 +1,13 @@
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script>
+$(document).ready(function(){
+ $.ajax({
+          url: "SimpleRest.php",
+          data: 'rest='+encodeURIComponent('https://lsapi.thomson-pharma.com/ls-api-ws/ws/rs/ontologies-v1/taxonomy/indication/search/lupus')
+        }).done(function(data) {
+          $('#thediv').text(data).html();
+        });   
+});
+</script>
+
+<div id="thediv"></div>
